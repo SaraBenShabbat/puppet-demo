@@ -19,6 +19,7 @@ node 'puppet-agent' {
 }
 
 node 'puppet-centos' {
+  include role::master_server
   file { '/root/SERVER_NAME':
     ensure => file,
     content => "Welcome to ${fqdn}!\n",

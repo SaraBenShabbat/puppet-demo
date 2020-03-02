@@ -6,6 +6,7 @@ node 'puppet-master' {
   file { '/root/SERVER_NAME':
     ensure => file,
     content => "Welcome to ${fqdn}\n",
+    owner => 'root',
    }
 }
 

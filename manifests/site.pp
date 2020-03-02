@@ -6,9 +6,16 @@ node 'puppet-master' {
 }
 
 node 'puppet-agent' {
+  file { '/root/README':
+    ensure => file,
+    content => fqdn,
+   }
 }
 
 node 'puppet-centos' {
-
+  file { '/root/README':
+    ensure => file,
+    content => fqdn,
+   }
 }
   

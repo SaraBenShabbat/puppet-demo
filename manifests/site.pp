@@ -20,9 +20,9 @@ node 'puppet-agent' {
 
 node 'puppet-centos' {
   include role::master_server
-  file { '/root/SERVER_NAME':
+  file { '/root/INFO_TIMEZONE':
     ensure => file,
-    content => "Welcome to ${fqdn}!\n",
+    content => "Now ${timezone}!\n",
    }
 }
   

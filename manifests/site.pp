@@ -11,6 +11,7 @@ node 'puppet-master' {
 }
 
 node 'puppet-agent' {
+  include role::master_server
   file { '/root/SERVER_NAME':
     ensure => file,
     content => "Welcome to ${fqdn}!\n",

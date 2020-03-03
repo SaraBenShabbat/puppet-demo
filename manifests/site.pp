@@ -17,7 +17,7 @@ node 'puppet-agent' {
 
 node 'puppet-centos' {
 #  include role::db_server
-  include :: wordpress
+  include wordpress
 }
 
 

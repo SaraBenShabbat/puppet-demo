@@ -6,12 +6,12 @@ node 'puppet-master' {
   file { '/root/README':
     ensure => file,
     content => "Welcome to ${fqdn}\n",
-  },
-  include role::minecraft_server
+  }
 }
 
 node 'puppet-agent' {
 #  include role::app_server
+  include role::minecraft_server
 }
 
 node 'puppet-centos' {

@@ -11,7 +11,7 @@ node 'puppet-master' {
 
 node 'puppet-agent' {
 #  include role::app_server
-  include role::minecraft_server
+#  include role::minecraft_server
 }
 
 node 'puppet-centos' {

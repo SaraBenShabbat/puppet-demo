@@ -12,11 +12,12 @@ node 'puppet-master' {
 node 'puppet-agent' {
 #  include role::app_server
 #  include role::minecraft_server
-  include ::wordpress
+#  include ::wordpress
 }
 
 node 'puppet-centos' {
-  include role::db_server
+#  include role::db_server
+  include :: wordpress
 }
 
 

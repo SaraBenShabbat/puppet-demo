@@ -9,6 +9,7 @@ node 'puppet-agent' {
 }
 
 node 'puppet-centos' {
+  include role::app_server
 }
 
 

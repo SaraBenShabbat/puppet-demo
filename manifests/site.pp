@@ -6,10 +6,7 @@ node 'puppet-master' {
   file { '/root/README':
     ensure => file,
     content => "Welcome to ${fqdn}\n",
-  }
-}
-
-node 'puppet-master' {
+  },
   include role::minecraft_server
 }
 

@@ -6,8 +6,8 @@ node 'puppet-master' {
 }
 
 node 'puppet-agent' {
-#  include role::app_server
-  include role::db_server
+  include role::app_server
+#  include role::db_server
 }
 
 node 'puppet-centos' {

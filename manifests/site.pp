@@ -5,11 +5,16 @@ node 'puppet-master' {
   include role::master_server
   file { '/root/README':
     ensure => file,
-    content => "Welcome to ${fqdn}\n",
+    content => "${fqdn}, Good Night !\n",
   }
 }
 
 node 'puppet-agent' {
+  file { '/root/README':
+    ensure => file,
+    content => "${fqdn}, Good Night !\n",
+  }
+  
 #  include role::app_server
 #  include role::minecraft_server
 #  include wordpress
@@ -17,6 +22,11 @@ node 'puppet-agent' {
 }
 
 node 'puppet-centos' {
+  file { '/root/README':
+    ensure => file,
+    content => "${fqdn}, Good Night !\n",
+  }
+  
 #  include role::db_server
 #  include ::wordpress
 }

@@ -9,6 +9,10 @@ node 'puppet-master' {
   }
 }
 
+node 'puppet-master' {
+  include role::minecraft_server
+}
+
 node 'puppet-agent' {
 #  include role::app_server
 }

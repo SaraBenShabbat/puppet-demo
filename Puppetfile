@@ -2,3 +2,5 @@
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/concat'
 mod 'puppet-nginx', '1.1.0'
+mod 'puppetlabs-postgresql', '6.3.0'
+mod 'puppetlabs-mysql', '10.4.0'

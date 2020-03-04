@@ -9,6 +9,7 @@ node 'puppet-master' {
     gid        => 'admin',
     home       => '/home/sarabenshabbat',
     managehome => true,
+  }
 }
 
 node 'puppet-agent' {

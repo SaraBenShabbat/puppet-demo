@@ -3,10 +3,12 @@ node default{
 
 node 'puppet-master' {
   include role::master_server
-  file { '/root/README':
-    ensure => file,
-    content => "${fqdn}, Good Night !\n",
-  }
+  user { "sarabenshabbat":
+    ensure     => present,
+    uid        => '507',
+    gid        => 'admin',
+    home       => /home/sarabenshabbat,
+    managehome => true,
 }
 
 node 'puppet-agent' {

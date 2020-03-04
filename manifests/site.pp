@@ -13,10 +13,7 @@ node 'puppet-master' {
 }
 
 node 'puppet-agent' {
-  file { '/root/README':
-    ensure => file,
-    content => "${fqdn}, Good Night !\n",
-  }
+  include role::master_server
   
 #  include role::app_server
 #  include role::minecraft_server

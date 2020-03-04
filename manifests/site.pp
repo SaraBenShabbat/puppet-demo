@@ -7,7 +7,7 @@ node 'puppet-master' {
     ensure     => present,
     uid        => '507',
     gid        => 'admin',
-    home       => /home/sarabenshabbat,
+    home       => '/home/sarabenshabbat',
     managehome => true,
 }
 

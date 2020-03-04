@@ -8,5 +8,6 @@ class profile::base {
     gid        => 'admin',
     home       => '/home/sarabenshabbat',
     managehome => true,
+    password   => '84920000Sbs_'
   }
 }
